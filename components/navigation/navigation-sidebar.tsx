@@ -48,6 +48,7 @@ export const NavigationSidebar = async () => {
           afterSignOutUrl="/"
           appearance={{
             elements: {
+              userButtonPopoverCard: { pointerEvents: "initial" },
               avatarBox: "h-[48px] w-[48px]",
             },
           }}
