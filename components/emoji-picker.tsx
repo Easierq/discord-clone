@@ -11,7 +11,6 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { useEffect, useState } from "react";
 
 const Picker = dynamic(() => import("@emoji-mart/react"), { ssr: false });
 
@@ -20,15 +19,6 @@ interface EmojiPickerProps {
 }
 
 export const EmojiPicker = ({ onChange }: EmojiPickerProps) => {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) {
-    return null;
-  }
   const { resolvedTheme } = useTheme();
 
   return (
